@@ -255,10 +255,26 @@
 
         <!-- Do not display donate link on producers platform -->
 
-        [% IF !(server_options_producers_platform) %]
+        {% comment %} [% IF !(server_options_producers_platform) %]
             [% IF lc == "en" or lc == "fr" %]
                 <h3>[% lang("you_can_also_help_us") %]</h3>
                 <p>[% lang("bottom_content") %]</p>
+            [% END %]
+        [% END %] {% endcomment %}
+
+        [% IF !(server_options_producers_platform) %]
+            [% IF lc == "en" or lc == "fr" %]
+                <h3>[% lang("you_can_also_help_us") %]</h3>
+
+                <a href="[% localized_donate_url %]?utm_source=login-open-food-facts">
+                    <img src="https://static.openfoodfacts.org/images/svg/donate-icon.svg" alt="[% cta_donate %]" />
+                </a>
+
+                <p>[% bottom_content %]</p>
+
+                [% IF show_lilo_link %]
+                    <p>[% lang("and_also_with_lilo") %]</p>
+                [% END %]
             [% END %]
         [% END %]
 

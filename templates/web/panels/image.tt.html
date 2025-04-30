@@ -11,9 +11,13 @@
     <meta itemprop="imgid" content="[% image.type %]">
     
     <figcaption>
+        <a href="https://nutripatrol.openfoodfacts.org/flag/image/?barcode=[% code %]&image_id=[% image.id %]&source=web&flavor=off" style="text-decoration: none;" title="Report the photo">
+            ⚑
+        </a>
         <a href="/cgi/product_image.pl?code=[% code %]&amp;id=[% image.id %]" title="Photo detail and attribution information">
             [% display_icon('cc') %]
         </a>
+        
     </figcaption>
 </figure>
 

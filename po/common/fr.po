@@ -7378,3 +7378,8 @@ msgctxt "in_contact_with_food"
 msgid "In contact with food"
 msgstr "En contact avec l'aliment"
 
+msgctxt "and_also_with_lilo"
+msgid "And also with Lilo !"
+msgstr "Et aussi avec Lilo !"
+
+

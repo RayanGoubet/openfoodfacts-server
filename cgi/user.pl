@@ -433,6 +433,9 @@ $template_data_ref->{userid} = $userid;
 $template_data_ref->{type} = $type;
 $template_data_ref->{crm_contact_url} = get_contact_url($user_ref);
 $template_data_ref->{org_url} = ($user_ref->{org} ? "/cgi/org.pl?type=edit&orgid=$user_ref->{org}" : '');
+$template_data_ref->{localized_donate_url} = 'https://world.openfoodfacts.org/donate-to-open-food-facts';
+$template_data_ref->{cta_donate} = 'Donate to Open Food Facts';
+$template_data_ref->{show_lilo_link} = ($lang eq 'fr') ? 1 : 0;
 
 if (($type eq "edit_owner") and ($action eq "process")) {
 	$log->info("redirecting to / after changing owner", {}) if $log->is_info();
